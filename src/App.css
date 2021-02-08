@@ -1,39 +1,74 @@
 .App {
-  text-align: center;
+  padding: 16px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.List-FilterButton,
+.List-FilterSelect {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-right: 16px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-float infinite 3s ease-in-out;
-  }
+.ListItem-Wrapper {
+  background-color: #fefefe;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  display: flex;
 }
 
-.App-header {
-  min-height: 100vh;
+.ListItem-Language {
+  font-size: 12px;
+  font-weight: 400;
+  display: block;
+}
+
+.ListItem-Name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.ListItem-Description {
+  font-size: 16px;
+  margin: 0;
+}
+
+.ListItem-LeftSide {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+}
+
+.ListItem-RightSide {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-grow: 1;
 }
 
-.App-link {
-  color: rgb(112, 76, 182);
+.ListItem-StarButton {
+  padding: 8px;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-@keyframes App-logo-float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px)
-  }
-  100% {
-    transform: translateY(0px)
-  }
+.ListItem-StartButton--Active {
+  cursor: pointer;
+  padding: 8px;
+  background: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 500;
 }
