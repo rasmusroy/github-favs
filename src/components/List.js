@@ -1,5 +1,38 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import ListItem from "./ListItem";
+
+const ListFilterButton = styled.button`
+  padding: 8px;
+  background: #fff;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+`;
+
+const ListFilterSelect = styled.select`
+  padding: 8px;
+  background: #fff;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+
+  &:hover {
+    box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.1);
+  }
+`;
 
 const List = ({ items }) => {
   const [onlyShowStarred, setOnlyShowStarred] = useState(false);
@@ -25,14 +58,14 @@ const List = ({ items }) => {
 
   return (
     <div>
-      <button
+      <ListFilterButton
         className="List-FilterButton"
         onClick={() => setOnlyShowStarred(!onlyShowStarred)}
       >
         Only Show {onlyShowStarred ? "all" : "⭐"} Repositories
-      </button>
+      </ListFilterButton>
 
-      <select
+      <ListFilterSelect
         className="List-FilterSelect"
         name="languageFilter"
         id="languages"
@@ -44,7 +77,7 @@ const List = ({ items }) => {
             {filter}
           </option>
         ))}
-      </select>
+      </ListFilterSelect>
 
       {items.map((item) => (
         <ListItem key={item.id} item={item} />

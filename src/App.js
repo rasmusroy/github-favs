@@ -1,10 +1,15 @@
 import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
-
-import "./App.css";
+import styled from "styled-components";
 
 import List from "./components/List";
 import { createList } from "./store/actions";
+
+const AppWrapper = styled.div`
+  padding: 16px;
+  max-width: 800px;
+  margin: 0 auto;
+`;
 
 function App() {
   const dispatch = useDispatch();
@@ -26,10 +31,10 @@ function App() {
   }, [items, dispatch]);
 
   return (
-    <div className="App">
+    <AppWrapper>
       <h1>Github Repos</h1>
       <List items={items} />
-    </div>
+    </AppWrapper>
   );
 }
 
