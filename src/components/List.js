@@ -57,7 +57,7 @@ const List = ({ items }) => {
   }
 
   return (
-    <div>
+    <>
       <ListFilterButton
         className="List-FilterButton"
         onClick={() => setOnlyShowStarred(!onlyShowStarred)}
@@ -82,7 +82,7 @@ const List = ({ items }) => {
       {items.map((item) => (
         <ListItem key={item.id} item={item} />
       ))}
-    </div>
+    </>
   );
 };
 
