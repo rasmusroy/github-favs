@@ -1,6 +1,6 @@
 .App {
   padding: 16px;
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -8,11 +8,18 @@
 .List-FilterSelect {
   padding: 8px;
   background: #fff;
-  border: 1px solid black;
+  border: 0;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 16px;
   margin-right: 16px;
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.2s;
+}
+
+.List-FilterButton:hover ,
+.List-FilterSelect:hover {
+  box-shadow: 0 2px 2px 3px rgba(0, 0, 0, 0.1);
 }
 
 .ListItem-Wrapper {
@@ -34,6 +41,10 @@
   margin: 0;
   font-size: 18px;
   font-weight: 600;
+}
+
+.ListItem-Name a {
+  color: #2a2a2a;
 }
 
 .ListItem-Description {
@@ -61,6 +72,13 @@
   border: 1px solid black;
   border-radius: 10px;
   cursor: pointer;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+  transition: .2s;
+}
+
+.ListItem-StarButton:hover {
+transform:translateY(-2px);
+box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 .ListItem-StartButton--Active {
@@ -72,3 +90,8 @@
   color: #fff;
   font-weight: 500;
 }
+
+.ListItem-StartButton--Active:hover {
+  transform:translateY(-2px);
+  box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
